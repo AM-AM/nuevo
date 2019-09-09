@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <div class="col-lg-8">
+      <div class="p-5">
+        <div class="text-center">
+          <h1 class="h4 text-gray-900 mb-4">Crear cuenta</h1>
+        </div>
+        <form class="user" action="ajax/acciones-administrador.php" method="POST">
+  
+            
+          <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <input required type="text" class="form-control form-control-user" id="PrimerNombre" name="PrimerNombre" placeholder="Primer Nombre">
+              </div>
+              <div class="col-sm-6">
+                <input required ype="text" class="form-control form-control-user" id="SegundoNombre" name="SegundoNombre" placeholder="Segundo Nombre">
+              </div>
+          </div>
+          <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                  <input required required type="text" class="form-control form-control-user" id="PrimerApellido" name="PrimerApellido" placeholder="Primer Apellido">
+              </div>
+              <div class="col-sm-6">
+                <input required type="text" class="form-control form-control-user" id="SegundoApellido" name="SegundoApellido" placeholder="Segundo Apellido">
+              </div>
+  
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <input required type="text" class="form-control form-control-user" id="NombreUsuario" name="NombreUsuario" placeholder="Nombre de Usuario">
+          
+          </div>
+            <div class="col-sm-6">
+                <input required type="text" class="form-control form-control-user" id="NumeroIdentidad"name="NumeroIdentidad" placeholder="Numero de Identidad">
+  
+            </div>
+  
+        </div>
+          
+          
+          <div class="form-group">
+              <input required type="number" class="form-control form-control-user" id="NumeroCuenta" name="NumeroCuenta" placeholder="Numero de Cuenta">
+          </div>
+          <div class="form-group">
+              <input required type="email" class="form-control form-control-user" id="Email" name="Email" placeholder="Correo electrónico">
+          </div>
+          
+          <div class="form-group row">
+              <div class="col-sm-4 mb-2 mb-sm-0">
+                <input required type="number" class="form-control form-control-user" id="Telefono" name="Telefono" placeholder="Numero de Telefono">
+              </div>
+              <div class="col-sm-4">
+                <input required type="date"  min="1940-01-01" max="2010-12-31" class="form-control form-control-user" id="FechaNacimiento" name="FechaNacimiento">
+              </div>
+              <div class="col-sm-4">
+                <select required name="TipoUsuario" id="TipoUsuario" class="form-control form-control-user" size="1" >
+                  
+                  <option value="" selected>Tipo de Usuario</option>
+                  <option value="2">Instructor</option>
+                  <option value="3" >Estudiante</option>
+                </select>
+            </div>
+          </div>
+  
+          
+          <div class="form-group row">
+              <div class="col-sm-4 mb-3 mb-sm-0">
+                  <select required name="LugarNacimiento" id="LugarNacimiento"  class="form-control form-control-user" size="1">
+                      <option value="" selected>Lugar de Nacimiento</option>
+                      <option value="1">Tegucigalpa</option>
+                      <option value="2" >Choluteca</option>
+                      <option value="3">Colon</option>
+                      <option value="4" >Comayagua</option>
+                      <option value="5">Copán</option>
+                      <option value="6" >Cortes</option>
+                      <option value="7">El Paraíso</option>
+                      <option value="8" >Atlántida</option>
+                    </select>
+                    </select>
+              </div>
+               
+              
+              <div class="col-sm-4">
+                  <select name="LugarResidencia" required id="LugarResidencia" class="form-control form-control-user" size="1">
+                      <option value="" selected>Lugar de Residencia</option>
+                      <option value="1">Tegucigalpa</option>
+                      <option value="2" >Choluteca</option>
+                      <option value="3">Colon</option>
+                      <option value="4" >Comayagua</option>
+                      <option value="5">Copán</option>
+                      <option value="6" >Cortes</option>
+                      <option value="7">El Paraíso</option>
+                      <option value="8" >Atlántida</option>
+                    </select>
+                    </select>
+              </div>
+              <div class="col-sm-4">
+                  <select name="Genero" required id="Genero" class="form-control form-control-user" size="0">
+                    <option value="" selected>Genero</option>
+                    <option value="1" >Masculino</option>
+                    <option value="2">Femenino</option>
+                    
+                  </select>
+              </div>
+          </div>
+  
+          <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <input required type="password" class="form-control form-control-user" id="Contrasenia" name="Contrasenia" placeholder="Contraseña">
+            </div>
+            <div class="col-sm-6">
+              <input required type="password" class="form-control form-control-user" id="Contrasenia2"name="Contrasenia2" placeholder="Repetir contraseña">
+            </div>
+          </div>
+          <div class="form-group row">
+            <input type="submit"  class="btn btn-info" value="Guardar Usuario" onclick  = "getData()">
+          </div>
+          
+          <hr>
+  
+          
+          <script>
+            var getData = function(){
+             var TipoUsuario = document.getElementById("TipoUsuario").value;
+             var PrimerNombre = document.getElementById("PrimerNombre").value;
+             var PrimerApellido = document.getElementById("PrimerApellido").value;
+             var NumeroCuenta = document.getElementById("NumeroCuenta").value;
+             var NombreUsuario = document.getElementById("NombreUsuario").value;
+  
+             var Contrasenia = document.getElementById("Contrasenia").value;
+             var Contrasenia2 = document.getElementById("Contrasenia2").value;
+  
+  
+             if(TipoUsuario == "" ||PrimerNombre == "" ||PrimerApellido == "" || 
+             NumeroCuenta == ""||NombreUsuario == "" || Contrasenia == ""||Contrasenia2 == ""){
+               return alert ('Hay Campos Vacios');
+             } else if (Contrasenia !== Contrasenia2) {
+              return alert ('Contraseñas No coinciden');
+             }else {
+              Push.create("Usuario Registrado",{
+                  body: "El Usuario se ha agregado Correctamente",
+                  icon: "img/instructor.png",
+                  timeout: 4000,
+                  onClick: function () {
+                    this.close();
+                  }
+                });
+             }
+           }
+  
+          </script>
+        </form>
+      </div>
+  
+    </div>  
+  </body> 
+  <script src="js/jquery-3.2.1.min.js"></script>
+</html>
+         
