@@ -50,7 +50,7 @@
                   <td> '. $res['numero_cuenta']. '</td>
                   <td> <input type="submit" class="btn btn-primary mb-2" value="Actualizar" name="actualizar"></td>
                   <td> <input type="submit" class="btn btn-danger mb-2" value="Borrar" name="borrar"> </td>
-                  <td> <input type="submit" class="btn btn-primary mb-2" value="Ver Chat" name="chat"></td>
+                  <td><a class="btn btn-primary mb-2" href="tablas/chat.php?id='.$res['id_persona_usuario'].'" >ver Chat</a></td>
                   
                   
                  

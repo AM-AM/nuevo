@@ -391,10 +391,16 @@ foreach($resultado1 as $res1){
                 <span class="font-weight-bold" >'.$res['mensaje'].'</span>
               </div>
             </a>
+           
         ';
         }
-                    
+        if ($_SESSION['tipo_usuario'] == 2){
 
+        
+           echo '
+           <a class="dropdown-item text-center small text-gray-500" href="tablas/chat.php?id=1">Escribir Mensaje</a>
+           ';         
+        }
 ?>
             
 
